@@ -13,7 +13,7 @@ Sederhananya python adalah sebuah bahasa pemrograman dinamis yang memiliki sinta
 (Sebaiknya kalian membaca bab mengenai variable terlebih dahulu) Python merupakan bahasa pemrograman yang variabel-nya dapat memiliki tipe data yang berubah-ubah
 
 ## 1. Hello, World
-### Apa itu "Hello World"
+### Apa itu "Hello World"?
 Hello World adalah program yang biasanya dituliskan oleh seorang programmer ketika sedang mencoba bahasa pemrograman baru. Tujuan dari program hello world adalah untuk menampilkan teks "Hello, World" pada terminal
 
 ### Bagaimana "Hello, World" ditulis dalam python?
@@ -24,16 +24,25 @@ print("Hello, World")
 ```
 
 ## 2. Variabel
-### Apa itu variabel
+### Apa itu variabel?
 Variabel merupakan cara didalam suatu program untuk menyimpan data. Data yang disimpan nantinya akan diberikan nama dan dapat digunakan dengan menyebutkan nama dari variabel tersebut.
 
-### Dimana data disimpan
+### Dimana data disimpan?
 Data akan disimpan di dalam **memory** (memory yang dimaksud disini adalah RAM)
 
 ### Bagaimana membuat variabel di dalam Python?
 Variabel di dalam python dapat dibuat dengan format sebagai berikut *"nama_variabel = nilai_dari_variable"*. Nama dari suatu variabel haruslah dimulai dengan suatu huruf lalu dapat diikuti dengan huruf lainnya atau angka. Nama dari variabel tidak boleh terdiri dari simbol-simbol lain kecuali simbol**_**.
 
-### Berikan contoh nama variabel
+### Bagaimana contoh dari variabel pada Python??
+Berikut ini merupakan contoh variabel di dalam Python
+```python
+# variabel.py
+umur_ku = 10
+umur_mu = umur_ku
+print("Umur mu adalah {} sementara umurku adalah {}".format(umur_mu, umur_ku))
+```
+
+### Berikan contoh nama variabel?
 Berikut ini contoh nama variabel dalam Python
 ```python
 inivalid = 1
@@ -43,14 +52,6 @@ _variabel_valid_2 = 4
 
 1_ini_tidak_valid = 1
 ini-bukan-variabel = 2
-```
-
-### Bagaimana contoh dari variabel pada Python??
-Berikut ini merupakan contoh variabel di dalam Python
-```python
-# variabel.py
-umur_ku = 10
-umur_mu = 100
 ```
 
 ## 3. Tipe Data
@@ -67,4 +68,45 @@ String  | Merupakan tipe data yang berupa teks biasanya diawali dan diakhiri den
 Boolean | Merupakan tipe data yang nilainya hanya terdiri dari Benar (True) atau Salah (False)
 
 ### Apakah bisa terdapat tipe data lain selain ke-4 tipe data ini?
-Ya bisa saja tetapi itu akan dibahas pada tipe data lanjutan
+Ya tentu saja. **Saya tidak menyarankan anda untuk lanjut membaca jawaban ini apabila anda ingin pusing**. Contohnya pada tipe data integer itu memiliki ukuran sebesar 64-bit atau 8-byte. Artinya ketika kalian membuat sebuah variabel dengan tipe data integer di dalam Python, Python akan menggunakan 8-byte dari memory/RAM komputer kalian. Dengan menggunakan 8-byte memory kalian dapat menyimpan angka dengan nilai dari -9,223,372,036,854,775,808 (-(2^63)) sampai 9,223,372,036,854,775,807 (2^63). Nilai sebesar 9 juta triliun tentunya bakal sangat jarang kalian pakai sehingga, di bahasa pemrograman lain biasanya tipe data integer memiliki berbagai variasi seperti int8 (8-bit/1-byte), int16 (16-bit/2-byte), int32 (32-bit/4-byte), dan int64 (64-bit/8-byte). Sama juga seperti float di bahasa pemrograman lain terdapat tipe data seperti float32 atau float64. Sehingga kalian bisa lebih leluasa untuk mengatur ukuran dari variabel kalian. Selain tipe-tipe data tersebut masih terdapat tipe data lain yang sifatnya bukan singular data type, tetapi compositedata type. Composite tipe data type merupakan tipe data yang tersusun dari beberapa tipe data lainnya dan akan dibahas pada tipe data lanjutan.
+
+### Apa hubungannya dengan variable??
+Seperti yang disebutkan pada part 2 bahwa variabel dapat menampung suatu data. Sekarang kita tahu bahwa terdapat berbagai data yang bisa kita tampung di dalam suatu variable contohnya
+```python
+nama_ku = "Andy"
+umur_ku = 22
+apakah_aku_laki_laki = True
+apakah_aku_perempuan = False
+tinggi_badan_ku = 180.15
+
+print("nama ku adalah {}. Tipe data dari variabel nama_ku adalah {}".format(nama_ku, type(nama_ku)))
+print("umur ku adalah {}. Tipe data dari variabel umur_ku adalah {}".format(umur_ku, type(umur_ku)))
+print("Apakah aku laki-laki? {}. Tipe data dari variabel apakah_aku_laki_laki adalah {}".format(apakah_aku_laki_laki, type(apakah_aku_laki_laki)))
+print("Apakah aku perempuan? {}. Tipe data dari variabel apakah_aku_perempuan adalah {}".format(apakah_aku_perempuan, type(apakah_aku_perempuan)))
+print("Tinggi badanku adalah? {}. Tipe data dari variabel tinggi_badan_ku adalah {}".format(tinggi_badan_ku, type(tinggi_badan_ku)))
+```
+
+### Apa manfaatnya memahami tipe data??
+Pemahaman mengenai tipe data sebenarnya tidak akan memiliki dampak signifikan jika kalian ingin mempelajari Python. Python itu sendiri merupakan bahasa pemrograman yang dinamis. Disebut dinamis sederhananya berarti variable di Python tidak terlalu peduli dengan tipe data dari data yang ingin kalian simpan. Berbeda dengan beberapa bahasa pemrograman lainnya seperti C/C++, C# atau Java yang merupakan bahasa pemrograman yang statis, jika kalian membuat sebuah variabel dengan tipe data integer dan setelah itu menyimpan data berupa *float*, kalian justru akan menerima error.
+Contohnya
+```python
+nama_ku = "Andy"
+print(nama_ku)
+nama_ku = 10 # Tidak akan error
+print(nama_ku)
+```
+
+```c
+int x;
+x = 10;
+x = "Andy"; // Akan menyebabkan error
+```
+
+Hanya pada beberapa kondisi tertentu Python akan peduli pada tipe data program kalian contohnya ketika kalian ingin melakukan operasi dengan menggunakan simbol **+**. Ketika kalian menggunakan **+** pada data integer hasilnya tentu saja adalah pertambahan dari dua data atau lebih. Sementara apabila yang **+** bertemu dengan string maka hasilnya adalah berupak konkatenasi atau penggabungan dari dua string tersebut contohnya "Yogi" + "Nauval" -> "YogiNauval". Tapi ketika kalian menggunakan **+** pada data yang satunya integer dan yang lain adalah string maka justru akan menghasilkan error
+```python
+nama_1 = "Yogi"
+nama_2 = "Nauval"
+x = 10
+print(nama_1 + " " + nama_2)
+print(nama_1 + x)
+```
