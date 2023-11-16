@@ -1,16 +1,19 @@
 # Cheatsheet Pemrograman dengan Python
 ## 0. Sebelum lanjut, baca dulu!!!
 ### Apa isi dari buku ini??
-Buku ini berisikan materi singkat dan cepat tentang konsep-konsep dasar pemrograman dengan menggunakan Python. Konsep-konsep dasar yang dibahas adalah variabel, tipe data, percabangan (terdiri dari pengkondisian dan perulangan), fungsi, array dan modularisasi. Konsep-konsep ini akan dijelaskan dengan menggunakan Python sebagai implementasinya. Konsep-konsep dasar pemrograman ini sendiri pada dasarnya akan sama di bahasa pemrograman lainnya, sehingga ketika anda mempelajari bahasa pemrograman lain anda hanya perlu mempelajari sintaks baru saja. Perlu diperhatikan bahwa buku ini hanya berisi konsep-konsep dasar bukan mengenai bahasa pemrograman Python itu sendiri. Python sebagai sebuah bahasa pemrograman memiliki berbagai fitur yang dapat mempermudah penulisan program tetapi termasuk pada level yang cukup advance apabila anda baru mempelajari pemrograman.
+Buku ini berisikan materi singkat dan cepat tentang konsep-konsep dasar pemrograman dengan menggunakan Python sebagai bahasa untuk memberikan contoh-contohnya. Konsep-konsep dasar yang dibahas adalah variabel, tipe data, percabangan (terdiri dari pengkondisian dan perulangan), fungsi, array dan modularisasi. Konsep-konsep dasar pemrograman ini sendiri pada dasarnya akan sama di bahasa pemrograman lainnya, sehingga ketika kalian mempelajari bahasa pemrograman lain kalian hanya perlu mempelajari sintaks baru saja. Perlu diperhatikan bahwa maksud dari buku ini hanya untuk menjelaskan konsep-konsep dasar pemrograman bukan mengenai bahasa pemrograman Python itu sendiri. Python sebagai sebuah bahasa pemrograman memiliki berbagai fitur yang dapat mempermudah penulisan program tetapi termasuk pada level yang cukup advance apabila anda baru mempelajari pemrograman.
 
-### Kenapa Python?
-Python merupakan bahasa pemrograman yang paling populer serta sintaks mudah dibaca oleh manusia. Sehingga dengan memahami Python pada level dasar seharusnya buku ini sudah memberikan manfaat tambahan bagi kalian.
+### Kenapa contoh-contohnya menggunakan Python?
+Python merupakan bahasa pemrograman yang paling populer serta sintaks mudah dibaca oleh manusia. Sehingga dengan membaca buku ini secara tidak langsung kalian juga akan mempelajari Python dan akan memberikan manfaat tambahan bagi kalian.
 
-### Apa itu Python?
-Sederhananya python adalah sebuah bahasa pemrograman dinamis yang memiliki sintaks yang mudah dibaca oleh manusia.
+### Apa contoh bahasa pemrograman lain yang bisa digunakan?
+C, C++, C#, Java, Kotlin, Swift, Rust, Go, dan Javascript/Typescript
 
-### Kenapa Python disebut dinamis?
-(Sebaiknya kalian membaca bab mengenai variable terlebih dahulu) Python merupakan bahasa pemrograman yang variabel-nya dapat memiliki tipe data yang berubah-ubah
+### Dimana saja python bisa di pakai?
+- Machine Learning / Statistik / Data analysis
+- Pengembangan Web (Back-end dari Instagram dibuat dengan Python)
+- Pengembangan Game
+- dll (saya hanya berfokus pada 3 bidang diatas)
 
 ## 1. Hello, World
 ### Apa itu "Hello World"?
@@ -45,13 +48,14 @@ print("Umur mu adalah {} sementara umurku adalah {}".format(umur_mu, umur_ku))
 ### Berikan contoh nama variabel?
 Berikut ini contoh nama variabel dalam Python
 ```python
+# variabel_2.py
 inivalid = 1
 ini_juga_valid = 2
 variabel_valid_1  = 3
 _variabel_valid_2 = 4
 
-1_ini_tidak_valid = 1
-ini-bukan-variabel = 2
+1_ini_tidak_valid = 1 # Python bakal error di sini
+ini-bukan-variabel = 2 # Python bakal error juga di sini
 ```
 
 ## 3. Tipe Data
@@ -73,7 +77,7 @@ Ya tentu saja. **Saya tidak menyarankan anda untuk lanjut membaca jawaban ini ap
 ### Apa hubungannya dengan variable??
 Seperti yang disebutkan pada part 2 bahwa variabel dapat menampung suatu data. Sekarang kita tahu bahwa terdapat berbagai data yang bisa kita tampung di dalam suatu variable contohnya
 ```python
-nama_ku = "Andy"
+nama_ku = "Eric"
 umur_ku = 22
 apakah_aku_laki_laki = True
 apakah_aku_perempuan = False
@@ -90,23 +94,27 @@ print("Tinggi badanku adalah? {}. Tipe data dari variabel tinggi_badan_ku adalah
 Pemahaman mengenai tipe data sebenarnya tidak akan memiliki dampak signifikan jika kalian ingin mempelajari Python. Python itu sendiri merupakan bahasa pemrograman yang dinamis. Disebut dinamis sederhananya berarti variable di Python tidak terlalu peduli dengan tipe data dari data yang ingin kalian simpan. Berbeda dengan beberapa bahasa pemrograman lainnya seperti C/C++, C# atau Java yang merupakan bahasa pemrograman yang statis, jika kalian membuat sebuah variabel dengan tipe data integer dan setelah itu menyimpan data berupa *float*, kalian justru akan menerima error.
 Contohnya
 ```python
-nama_ku = "Andy"
+# tipe_data.py
+nama_ku = "Eric"
 print(nama_ku)
 nama_ku = 10 # Tidak akan error
 print(nama_ku)
 ```
 
 ```c
+// tipe_data.c
 int x;
 x = 10;
-x = "Andy"; // Akan menyebabkan error
+x = "Eric"; // Error
 ```
 
 Hanya pada beberapa kondisi tertentu Python akan peduli pada tipe data program kalian contohnya ketika kalian ingin melakukan operasi dengan menggunakan simbol **+**. Ketika kalian menggunakan **+** pada data integer hasilnya tentu saja adalah pertambahan dari dua data atau lebih. Sementara apabila yang **+** bertemu dengan string maka hasilnya adalah berupak konkatenasi atau penggabungan dari dua string tersebut contohnya "Yogi" + "Nauval" -> "YogiNauval". Tapi ketika kalian menggunakan **+** pada data yang satunya integer dan yang lain adalah string maka justru akan menghasilkan error
 ```python
+tipe_data_2.py
 nama_1 = "Yogi"
 nama_2 = "Nauval"
 x = 10
 print(nama_1 + " " + nama_2)
-print(nama_1 + x)
+print(nama_1 + x) # Akan error karena nama_1 tipe data nya string sementara x tipe data nya integer
 ```
+
