@@ -118,3 +118,12 @@ print(nama_1 + " " + nama_2)
 print(nama_1 + x) # Akan error karena nama_1 tipe data nya string sementara x tipe data nya integer
 ```
 
+## 4. Comment
+Comment adalah fitur yang umum ada di dalam berbagai bahasa pemrograman. Fitur ini memberikan kita kemampuan untuk memberikan informasi di dalam program kita. Fitur ini sudah digunakan pada contoh-contoh sebelumnya. Comment pada Python diawal dengan simbol **#**, Python nantinya akan mengacuhkan semua hal yang ada setelah **#** hingga baris berikutnya dimulai
+
+```python
+# print("Ini bakal diacuhkan oleh Python")
+print("Ini bakal dijalankan oleh Python")
+print("Ada comment ->") # Comment bisa juga diletakkan disini
+```
+
